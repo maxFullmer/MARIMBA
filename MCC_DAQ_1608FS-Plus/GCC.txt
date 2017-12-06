@@ -1,0 +1,3 @@
+//GCC for DAQ Code
+
+sudo gcc -g -Wall -I. -o USB_DAQ_1_Min USB_DAQ_1_Min.c -L. -lmccusb -lgps  -lm -L/usr/local/lib -lhidapi-libusb -lusb-1.0
