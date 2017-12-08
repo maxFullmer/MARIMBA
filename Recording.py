@@ -5,6 +5,9 @@ import os
 GPIO.setmode(GPIO.BOARD)
 GPIO.setup(12, GPIO.IN, pull_up_down=GPIO.PUD_UP)
 
+GPIO.setup(18, GPIO.OUT)
+GPIO.output(18, HIGH)
+
 source = "/home/pi/Desktop/"
 
 i = 0
