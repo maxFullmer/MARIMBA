@@ -21,6 +21,6 @@ while True:
 		destination = "Data%s.txt" % i
 		os.chdir(source)
                 os.rename("Data.txt", destination)
-		os.system("sudo sshpass -p 'ramboat'  scp /home/pi/Desktop/Data%s.txt jack@131.128.105.242:~/Desktop/1/" % i)
+		os.system("sudo sshpass -p '%%%%'  scp /home/pi/Desktop/Data%s.txt jack@%%%%%%%%%%%%%:~/Desktop/1/" % i)
 		print("Done! %s" % i)
 	time.sleep(.2)
