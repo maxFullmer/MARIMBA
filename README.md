@@ -8,8 +8,11 @@ Here is the breakdown of each major componant I will be discussing:
   a) Network Card Configuration
 2) Shutdown.py
 3) DeploymentHandler.py
+
   a) Mount USB Drive
+  
   b) rtp_send.sh
+
 4) DAQ_Sampler
 5) Transmit.sh
 
