@@ -91,7 +91,11 @@ This shell script needed to be written to nest the python script controlling the
 
 - Then it zips the file usign .bz2 for maximum compression
 
+`"sudo bzip2 %s" % destination`
+
 - Next it saves that file to the usb drive connected to the Pi
+
+`"sudo cp %s.txt.bz2 /media/pi/usb/1/" % d_time`
 
 - Finally it uses SCP to send the file to the server (plese note sshpass is used in order to log into the remote server, rsa keys were not functioning properly due to the dynamic ip set by the aircard)
 
