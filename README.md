@@ -2,7 +2,7 @@
 
 This is the breakdown of all code and background nessesary to duplicate what I put together for the senior design project. If you are reading this now, you have done more software than the entirity of my group this year. That being said, I challenge you to make this project what it was always meant to be. I am simply supplying the bare minimum to get you up and running... 
 
-Here is the breakdown of each major componant I will be discussing.
+Here is the breakdown of each major componant I will be discussing:
 
 1) /etc/rc.local
   a) Network Card Configuration
@@ -12,6 +12,8 @@ Here is the breakdown of each major componant I will be discussing.
   b) rtp_send.sh
   c) Transmit.sh
 4) DAQ_Sampler
+
+I'll do my best to go as in depth as possible but I do have to assume some level of knowlege about the hardware in use. Consult datasheets and the internet to fill in the blanks.
 
 1) The rc.local script is the last thing executed before recieving login shell access. We can leverage this to auto-execute scripts we stash there as the Pi boots. Here we have added 3 programs to launch in order. 
 
