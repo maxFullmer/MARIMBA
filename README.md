@@ -5,14 +5,11 @@ This is the breakdown of all code and background nessesary to duplicate what I p
 Here is the breakdown of each major componant I will be discussing:
 
 1) /etc/rc.local
-  a) Network Card Configuration
+a) Network Card Configuration
 2) Shutdown.py
 3) DeploymentHandler.py
-
-  a) Mount USB Drive
-  
-  b) rtp_send.sh
-
+a) Mount USB Drive
+b) rtp_send.sh
 4) DAQ_Sampler
 5) Transmit.sh
 
