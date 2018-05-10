@@ -24,7 +24,7 @@ def transmit():
 	cp = "sudo cp %s.txt.bz2 /media/pi/usb/1/" % d_time
 	os.system(cp)
 	print("Saved to USB storage device")
-	scp = "sudo sshpass -p 'ramboat' scp /home/pi/Documents/Data/%s.txt.bz2 whale-srv@131.128.105.39:~/Whale_Srv/Incoming/1/" % d_time
+	scp = "sudo sshpass -p '******' scp /home/pi/Documents/Data/%s.txt.bz2 whale-srv@******:~/Whale_Srv/Incoming/1/" % d_time
 	os.system(scp)
 	GPIO.output(18, 0)
 	print("Done! %s" % d_time)
