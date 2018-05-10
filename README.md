@@ -38,13 +38,13 @@ The purpose of Shutdown.py is to tie the pushbutton input on the PCB to the shut
 This is the central hub for all of the data collection. I set it up to act as a really crap daemon. Mostly because I wouldn't have shell access to the devices while they are deployed without a business account with Verizon. Food for thought when it isn't just one person "making things happen".
 
 - First it mounts the physical storage media to a known point in the filesystem for local data backup 
-' ' '
-sudo mount /dev/sda1 /media/pi/usb -o uid=pi,gid=pi
-' ' '
+
+`sudo mount /dev/sda1 /media/pi/usb -o uid=pi,gid=pi`
+
 - Then it begins the rtp stream to the server's vlc player @ port :1234 by launching rtp_send.sh
-' ' '
-ffmpeg -ar 8000 -f alsa -i plughw:1,0 -acodec mp2 -b:a 128k -f rtp rtp://131.128.105.39:1234
-' ' '
+
+`ffmpeg -ar 8000 -f alsa -i plughw:1,0 -acodec mp2 -b:a 128k -f rtp rtp://131.128.105.39:1234`
+
 Please note that ffmpeg is not a default package, nor is in the apt-get repository. So you must compile from source. Link here :
 
 https://trac.ffmpeg.org/wiki/CompilationGuide/Ubuntu
