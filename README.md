@@ -69,17 +69,17 @@ https://github.com/wjasper/Linux_Drivers
 
 https://github.com/wdalmut/libgps
 
-`   //GPS Read
+````//GPS Read
     time_t current_time;
     char* c_time_string;
     current_time = time(NULL);
-`
-`    // Open
+````
+````// Open
     gps_init();
     loc_t gps_data;
     gps_location(&gps_data);
     c_time_string = ctime(&current_time);
-`
+````
 
 - Next it samples 600,000 samples at 10 kHz and saves them to a text file.
 
