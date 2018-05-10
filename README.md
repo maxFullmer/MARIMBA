@@ -33,6 +33,8 @@ https://www.verizonwireless.com/dam/support/pdf/user_guide/u620-linux-integratio
 
 The purpose of Shutdown.py is to tie the pushbutton input on the PCB to the shutdown command on the Pi as to not corrupt the filesystem.
 
+`sudo shutdown now`
+
 **DeploymentHandler.py**
 
 This is the central hub for all of the data collection. I set it up to act as a really crap daemon. Mostly because I wouldn't have shell access to the devices while they are deployed without a business account with Verizon. Food for thought when it isn't just one person "making things happen".
@@ -55,7 +57,7 @@ Please note that you must compile all dependencies listed.
 
 - Next the DAQ sampling script saves data locally
 
-- Finally the Transmit.sh script
+- Finally the Transmit.sh script is executed upon completion of the DAQ sampling
 
 **DAQ_Sampler**
 
@@ -66,6 +68,18 @@ https://github.com/wjasper/Linux_Drivers
 - First the program reads the GPS and appends the data to the header of the data file. Information on libGPS can be found here:
 
 https://github.com/wdalmut/libgps
+
+`//GPS Read
+    time_t current_time;
+    char* c_time_string;
+    current_time = time(NULL);
+
+    // Open
+    gps_init();
+    loc_t gps_data;
+    gps_location(&gps_data);
+    c_time_string = ctime(&current_time);
+`
 
 - Next it samples 600,000 samples at 10 kHz and saves them to a text file.
 
@@ -80,3 +94,5 @@ This shell script needed to be written to nest the python script controlling the
 - Next it saves that file to the usb drive connected to the Pi
 
 - Finally it uses SCP to send the file to the server (plese note sshpass is used in order to log into the remote server, rsa keys were not functioning properly due to the dynamic ip set by the aircard)
+
+`"sudo sshpass -p 'ramboat' scp /home/pi/Documents/Data/%s.txt.bz2 whale-srv@131.128.105.39:~/Whale_Srv/Incoming/1/" % d_time`
