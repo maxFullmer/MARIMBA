@@ -101,4 +101,6 @@ This shell script needed to be written to nest the python script controlling the
 
 `"sudo sshpass -p '********' scp /home/pi/Documents/Data/%s.txt.bz2 whale-srv@*******:~/Whale_Srv/Incoming/1/" % d_time`
 
+Good luck, Have fun...
+
 --Jackson
