@@ -100,3 +100,5 @@ This shell script needed to be written to nest the python script controlling the
 - Finally it uses SCP to send the file to the server (please note sshpass is used in order to log into the remote server, rsa keys were not functioning properly due to the dynamic ip set by the aircard)
 
 `"sudo sshpass -p '********' scp /home/pi/Documents/Data/%s.txt.bz2 whale-srv@*******:~/Whale_Srv/Incoming/1/" % d_time`
+
+--Jackson
