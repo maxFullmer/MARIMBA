@@ -1,8 +1,8 @@
 # Whale_Watchers
 
-This is the breakdown of all code and background nessesary to duplicate what I put together for the senior design project. If you are reading this now, you have done more software than the entirity of my group this year. That being said, I challenge you to make this project what it was always meant to be. I am simply supplying the bare minimum to get you up and running... 
+This is the breakdown of all code and background necessary to duplicate what I put together for the senior design project. If you are reading this now, you have done more software than the entirety of my group this year. That being said, I challenge you to make this project what it was always meant to be. I am simply supplying the bare minimum to get you up and running... 
 
-Here is the breakdown of each major componant I will be discussing:
+Here is the breakdown of each major component I will be discussing:
 
 1) /etc/rc.local
    - Network Card Configuration
@@ -13,11 +13,11 @@ Here is the breakdown of each major componant I will be discussing:
 4) DAQ_Sampler
 5) Transmit.sh
 
-I'll do my best to go as in depth as possible but I do have to assume some level of knowlege about the hardware in use. Consult datasheets and the internet to fill in the blanks. Best to have the code up as well so you can compare syntax to the discriptions.
+I'll do my best to go as in depth as possible but I do have to assume some level of knowledge about the hardware in use. Consult datasheets and the internet to fill in the blanks. Best to have the code up as well so you can compare syntax to the descriptions.
 
 **rc.local**
 
-The rc.local script is the last thing executed before recieving login shell access. We can leverage this to auto-execute scripts we stash there as the Pi boots. Here we have added 3 programs to launch in order. 
+The rc.local script is the last thing executed before receiving login shell access. We can leverage this to auto-execute scripts we stash there as the Pi boots. Here we have added 3 programs to launch in order. 
 
 - First it prints the IP address of the device. 
 - Then it sleeps for 5 seconds in order to ensure things go through. 
@@ -61,7 +61,7 @@ Please note that you must compile all dependencies listed.
 
 **DAQ_Sampler**
 
-This driver was writen by using the template provided by MCC hosted on github at:
+This driver was written by using the template provided by MCC hosted on github at:
 
 https://github.com/wjasper/Linux_Drivers
 
@@ -85,11 +85,11 @@ https://github.com/wdalmut/libgps
 
 **Transmit.sh**
 
-This shell script needed to be written to nest the python script controlling the transmission of data in order to have propper permissions nessesary to make changes to the filesystem and send the data.
+This shell script needed to be written to nest the python script controlling the transmission of data in order to have proper permissions necessary to make changes to the filesystem and send the data.
 
-- First it renames the data file with a Unix-Time string (seconds passed since Jannuary 1st 1970)
+- First it renames the data file with a Unix-Time string (seconds passed since January 1st 1970)
 
-- Then it zips the file usign .bz2 for maximum compression
+- Then it zips the file using .bz2 for maximum compression
 
 `"sudo bzip2 %s" % destination`
 
