@@ -1,6 +1,6 @@
 # Whale_Watchers
 
-This is the breakdown of all code and background necessary to duplicate what I put together for the senior design project. If you are reading this now, you have done more software than the entirety of my group this year. That being said, I challenge you to make this project what it was always meant to be. I am simply supplying the bare minimum to get you up and running... 
+This is the breakdown of all code and background necessary to duplicate what I put together for the senior design project. I challenge you to make this project what it was always meant to be. I am simply supplying the bare minimum to get you up and running... 
 
 Here is the breakdown of each major component I will be discussing:
 
