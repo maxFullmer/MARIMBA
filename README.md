@@ -1,6 +1,6 @@
 # Whale_Watchers
 
-This is the breakdown of all code and background necessary to duplicate what I put together for the senior design project. I challenge you to make this project what it was always meant to be. I am simply supplying the bare minimum to get you up and running... 
+This is the breakdown of all code and background necessary to duplicate what I put together for the senior design project. I challenge you to make this project what it was always meant to be. I am simply supplying the bare minimum to get you up and running... I would suggest employing systemd for all persistant software sets. Google service deamon for details.
 
 Here is the breakdown of each major component I will be discussing:
 
@@ -100,6 +100,8 @@ This shell script needed to be written to nest the python script controlling the
 - Finally it uses SCP to send the file to the server (please note sshpass is used in order to log into the remote server, rsa keys were not functioning properly due to the dynamic ip set by the aircard)
 
 `"sudo sshpass -p '********' scp /home/pi/Documents/Data/%s.txt.bz2 whale-srv@*******:~/Whale_Srv/Incoming/1/" % d_time`
+
+After this you have everything you need to build off this rough prototype...
 
 Good luck, Have fun...
 
