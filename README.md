@@ -1,5 +1,7 @@
 # Whale_Watchers
 
+Welcome to Github. 
+
 This is the breakdown of all code and background necessary to duplicate what I put together for the senior design project. I challenge you to make this project what it was always meant to be. I am simply supplying the bare minimum to get you up and running... I would suggest employing systemd for all persistant software sets. Google service deamon for details.
 
 Here is the breakdown of each major component I will be discussing:
@@ -106,3 +108,5 @@ After this you have everything you need to build off this rough prototype...
 Good luck, Have fun...
 
 --Jackson
+
+Please remember to create a seperate branch of this page for your own build when the time comes.
