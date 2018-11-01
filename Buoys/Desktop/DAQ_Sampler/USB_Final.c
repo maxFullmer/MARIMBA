@@ -38,7 +38,7 @@ int main (int argc, char **argv)
   uint8_t channels;
   uint8_t ranges[8] = {0, 0, 0, 0, 0, 0, 0, 0};
   uint32_t count = 512;
-  double frequency = 10000;
+  double frequency = 5000;
   int ret;
   uint16_t sdataIn[8*512]; // holds 16 bit unsigned analog input data
 //  uint16_t dataC[256][8];  // corrected data
