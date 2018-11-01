@@ -15,16 +15,16 @@ d_time = 0
 def transmit():
 	d_time = time.time()
 	GPIO.output(18, 1)
-	destination = "/home/pi/Documents/Data/%s.txt" % d_time
+	destination = "/home/pi/Documents/Data/%s.wav" % d_time
 	os.chdir(source)
-       	os.rename("Data.txt", destination)
+       	os.rename("Data.wav", destination)
 	zip = "sudo bzip2 %s" % destination
 	os.system(zip)
 	print("File compressed")
-	cp = "sudo cp %s.txt.bz2 /media/pi/usb/1/" % d_time
+	cp = "sudo cp %s.wav.bz2 /media/pi/usb/1/" % d_time
 	os.system(cp)
 	print("Saved to USB storage device")
-	scp = "sudo sshpass -p '******' scp /home/pi/Documents/Data/%s.txt.bz2 whale-srv@******:~/Whale_Srv/Incoming/1/" % d_time
+	scp = "sudo sshpass -p '******' scp /home/pi/Documents/Data/%s.wav.bz2 whale-srv@******:~/Whale_Srv/Incoming/1/" % d_time
 	os.system(scp)
 	GPIO.output(18, 0)
 	print("Done! %s" % d_time)
